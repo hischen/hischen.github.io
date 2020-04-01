@@ -3,7 +3,7 @@ layout:     post
 title:      "统计机器翻译系统Moses的搭建与运行"
 subtitle:   "statistica machine translation system moses"
 date:       2018-07-25 12:00:00
-author:     "Alex"
+author:     "hischen"
 header-img: "img/post-bg-rwd.jpg"
 header-mask: 0.3
 catalog:    true
