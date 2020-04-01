@@ -1,11 +1,11 @@
 # Site settings
-title: Hux Blog
-SEOTitle: 黄玄的博客 | Hux Blog
+title: ChenXi Blog
+SEOTitle: 陈玺的博客 | ChenXi Blog
 header-img: img/home-bg.jpg
-email: huxpro@gmail.com
-description: "关于程序与设计、黑客与画家 | 黄玄，Web & Mobile Lover，Software Engineer，UX Designer | 这里是 @Hux黄玄 的个人博客，与你一起发现更大的世界。"
-keyword: "黄玄, Hux黄玄, Hux, 鬼栈, huxpro, @huxpro, 黄玄的博客, Hux Blog, 博客, 个人网站, 互联网, Web, JavaScript, 前端, 设计"
-url: "https://huangxuan.me"              # your host, for absolute URL
+email: achanhusky@gmail.com
+description: "程序员 | 陈玺，natural language processing，deep learning，machine translation | 这里是 @hischen 陈玺 的个人博客，与你一起发现更广阔的世界。"
+keyword: "陈玺, Hischen陈玺, nmt , nlper, ChenXi, @hischen, 陈玺的博客, ChenXi Blog, 博客, 个人网站, 互联网, 自然语言处理, 深度学习,神经机器翻译"
+url: "https://hischen.github.io"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
@@ -13,11 +13,11 @@ future: true
 
 # SNS settings
 RSS: false
-weibo_username:     huxpro
-zhihu_username:     huxpro
-github_username:    huxpro
-twitter_username:   huxpro
-#facebook_username:  huxpro
+weibo_username:     hischenx
+zhihu_username:     hischenx
+github_username:    hischen
+#twitter_username:   huxpro
+facebook_username:  alexander.chan.524596
 #linkedin_username:  firstname-lastname-idxxxx
 
 
@@ -59,7 +59,7 @@ kramdown:
 
 
 # Disqus settings
-disqus_username: hux
+disqus_username: hischen
 
 # Netease settings
 netease_comment: false
@@ -71,8 +71,8 @@ netease_comment: false
 # ba_track_id: [your track id]
 
 # Google Analytics
-ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
-ga_domain: huangxuan.me
+ga_track_id: 'UA-87273808-1'            # Format: UA-xxxxxx-xx
+ga_domain: https://hischen.github.io
 
 
 
