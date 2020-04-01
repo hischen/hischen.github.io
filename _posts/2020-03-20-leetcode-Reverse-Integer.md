@@ -2,7 +2,7 @@
 layout: post
 title: "leetcode刷题之Reverse Integer"
 subtitle: '整数反转'
-author: "Chenx"
+author: "hischen"
 header-style: text
 tags:
   - leetcode
