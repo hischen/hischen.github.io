@@ -82,10 +82,9 @@ return min(AK,BK)
 ### Subproblem reduction graph:   
 
 
-![](img/in-post/post-kuaidi-2.jpg)  
+![](/img/in-post/post-metro-panorama.jpg)  
 
 
-![郁金香](https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1585862353648&di=661d294de810ade5c11ae28afffa82c7&imgtype=0&src=http%3A%2F%2Fpics1.baidu.com%2Ffeed%2F7aec54e736d12f2eadac43c0721e8c64873568c3.jpeg%3Ftoken%3D86e86cef61200d41e4d95f5c393fee9d)
 
 ### Prove the correctness：
 
@@ -127,7 +126,7 @@ find-local-minimum(T,rootnode v):
 ```
 ### subproblem reduction graph：   
 
-![](img/in-post/divide-and-conquer-q2.jpg)
+![](/img/in-post/divide-and-conquer-q2.jpg)
 
 ### Prove the correctness：
 1.	 在程序初始的时候，我们从根节点开始程序，将根节点的值与它的左右孩子进行比较，返回两个孩子当中最小的那一个。
@@ -175,7 +174,7 @@ return (RC,A)
 
 ### subproblem reduction graph：   
 
-![](img/in-post/divide-and-conquer-q3.jpg)
+![](/img/in-post/divide-and-conquer-q3.jpg)
 
 ### Prove the correctness：  
 
