@@ -79,8 +79,13 @@ Find Median for two joint database()
 return min(AK,BK)
  ```   
 
-### Subproblem reduction graph:  
-![](img/in-post/divide-and-conquer-q1.jpg)
+### Subproblem reduction graph:   
+
+
+![](img/in-post/post-kuaidi-2.jpg)  
+
+
+![郁金香](https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1585862353648&di=661d294de810ade5c11ae28afffa82c7&imgtype=0&src=http%3A%2F%2Fpics1.baidu.com%2Ffeed%2F7aec54e736d12f2eadac43c0721e8c64873568c3.jpeg%3Ftoken%3D86e86cef61200d41e4d95f5c393fee9d)
 
 ### Prove the correctness：
 
