@@ -1,3 +1,14 @@
+<head>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            inlineMath: [['$','$']]
+            }
+        });
+    </script>
+</head>
 ---
 layout:     post
 title:      "Algorithm Design and Analysis--Divide And Conquer"
@@ -68,7 +79,7 @@ return min(AK,BK)
  ```   
 
 ### Subproblem reduction graph:  
-![Subproblem reduction graph1](img/in-post/divide_and_conquer_q1.jpg)
+![](img/in-post/divide_and_conquer_q1.jpg)
 
 ### Prove the correctness：
 
@@ -110,7 +121,7 @@ find-local-minimum(T,rootnode v):
 ```
 ### subproblem reduction graph：   
 
-![Subproblem reduction graph2](img/in-post/divide_and_conquer_q2.jpg)
+![](img/in-post/divide_and_conquer_q2.jpg)
 
 ### Prove the correctness：
 1.	 在程序初始的时候，我们从根节点开始程序，将根节点的值与它的左右孩子进行比较，返回两个孩子当中最小的那一个。
@@ -158,9 +169,10 @@ return (RC,A)
 
 ### subproblem reduction graph：   
 
-![Subproblem reduction graph３](img/in-post/divide_and_conquer_q3.jpg)
+![](img/in-post/divide_and_conquer_q3.jpg)
 
-###　Prove the correctness：   
+### Prove the correctness：  
+
 &ensp;&ensp;&ensp;&ensp;该算法在归并排序的基础上，在L[i] > R[j]的情况下，添加了一个L[i] > 3R[j]的判断过程，用来求解significant inversion的个数，其和归并过程复杂度一样，都为O(n)。与归并排序的思路类似，不断的将一个序列将分割为为两个子序列，直到序列中剩一个数时就无法再分了；在合并的过程中，比较左边序列的L[i]与右边序列的R[j]，如果L[i]>3* R[j]，那么显然，L[i]>3* R[j+1,……]，L[i]后面的数字都要比3* R[j]要大，该算法是正确的。
 
 ### Analyse the complexity：
