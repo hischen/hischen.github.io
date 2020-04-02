@@ -62,7 +62,7 @@ B(n/2)<B(n/2+1)，B(n/2+2)，…，B(n)
 
 ### pseudo-code:
 
-```c
+```C
 Find Median for two joint database()
 	k1=k2=n/2                  //先比较A和B的中位数
 	for i=2 to log2 n:
@@ -104,7 +104,7 @@ return min(AK,BK)
 
 ### pseudo-code：
 
-```c
+```C
 find-local-minimum(T,rootnode v):
 	if v->left child ==None&&v->right child==None:
 		return v
@@ -142,7 +142,7 @@ find-local-minimum(T,rootnode v):
 
   pseudo-code：
 
-  ```ｃ
+  ```C
 Sort-and-count(A):
     Divide A into two sub-sequences L and R;
     (RCL,L)= Sort-and-count(L);
@@ -166,7 +166,7 @@ Merge-and-count(L,R)
 	end for
 return (RC,A)
 
-  ```
+ ```
 
 ### subproblem reduction graph：   
 
