@@ -64,13 +64,13 @@ B(n/2)<B(n/2+1)，B(n/2+2)，…，B(n)
 
 ```python
 Find Median for two joint database()
-	k1=k2=n/2                  //先比较A和B的中位数
+	k1=k2=n/2                  #先比较A和B的中位数
 	for i=2 to log2 n:
 		AK=Querydatabase(A,k1)
 		BK=Querydatabase(B,k2)       
 		If AK> BK
-			Then k1=k1-n/2i       //下次查找查找数据库A上半部分的中位数
-				 k2=k2+n/2i      //下次查找查找数据库B下半部分的中位数
+			Then k1=k1-n/2i       #下次查找查找数据库A上半部分的中位数
+				 k2=k2+n/2i      #下次查找查找数据库B下半部分的中位数
 		Else:
 			     k1=k1+n/2i
 			     k2=k2-n/2i
