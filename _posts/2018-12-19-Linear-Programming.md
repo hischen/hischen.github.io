@@ -30,7 +30,7 @@ tags:
 1 Linear-inequality feasibility
 -------------
 
-&ensp;&ensp;Given a set of m linear inequalities on n variables x1, x2,…,xn, the linear-inequality feasibility problem asks if there is a setting of the variables that simultaneously satisfies each of the inequalities.  
+&ensp;&ensp;Given a set of m linear inequalities on n variables $x_1, x_2,\cdots,xn$, the linear-inequality feasibility problem asks if there is a setting of the variables that simultaneously satisfies each of the inequalities.  
 &ensp;&ensp;Show that if we have an algorithm for linear programming, we can use it to solve the linear-inequality feasibility problem. The number of variables and constraints that you use in the linear-programming problem should be polynomial in n and m.  
 
 ### 分析：
@@ -45,7 +45,7 @@ $$ max 0$$
 &emsp;&emsp;然后求解这个线性规划问题，即可得到这个线性不等式问题的解。
 ## 2 Interval Scheduling Problem
 
-&ensp;&ensp;A teaching building has m classrooms in total, and n courses are trying to use them. Each course $i( i = 1,2,\cdots,n)$only uses one classroom during time interval $[S_i, F_i] (F_i > S_i > 0)$. Considering any two courses can not be carried on in a same classroom at any time, you have to select as many courses as possible and arrange them without any time collision. For simplicity, suppose $2n$ elements in the set$ $｛S_1,F_1,\cdots, S_n , F_n ｝$are all different.  
+&ensp;&ensp;A teaching building has m classrooms in total, and n courses are trying to use them. Each course $i( i = 1,2,\cdots,n)$only uses one classroom during time interval $[S_i, F_i] (F_i > S_i > 0)$. Considering any two courses can not be carried on in a same classroom at any time, you have to select as many courses as possible and arrange them without any time collision. For simplicity, suppose $2n$ elements in the set$｛S_1,F_1,\cdots, S_n , F_n ｝$are all different.  
 &ensp;&ensp;Please use ILP to solve this problem, then construct an instance and use GLPK or Gurobi or other similar tools to solve it.
 
 
