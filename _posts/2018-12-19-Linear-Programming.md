@@ -36,12 +36,16 @@ tags:
 ### 分析：
 &emsp;&emsp;假设我们对如下线性规划的问题已经找到了解法：    
 
-$$ max\sum_{j=1}^{n} {c_jx_j}$$
-$$ \sum_{j=1}^{n} {a_{ij}\leq b_i},i=1,2,\cdots,m$$
-$$ x_j \geq0,j=1,2,\cdots,n$$
+$$ max\sum_{j=1}^{n} {c_jx_j}$$  
+
+$$ \sum_{j=1}^{n} {a_{ij}\leq b_i},i=1,2,\cdots,m$$  
+
+$$ x_j \geq0,j=1,2,\cdots,n$$  
+
 &emsp;&emsp;我们可以令目标函数为：      
 
-$$ max 0$$
+$$ max 0$$  
+
 &emsp;&emsp;然后求解这个线性规划问题，即可得到这个线性不等式问题的解。
 ## 2 Interval Scheduling Problem
 
