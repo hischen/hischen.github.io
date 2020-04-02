@@ -30,7 +30,7 @@ tags:
 1 Linear-inequality feasibility
 -------------
 
-&ensp;&ensp;Given a set of m linear inequalities on n variables $x_1, x_2,\cdots,xn$, the linear-inequality feasibility problem asks if there is a setting of the variables that simultaneously satisfies each of the inequalities.  
+&ensp;&ensp;Given a set of m linear inequalities on n variables $x_1, x_2,\cdots,x_n$, the linear-inequality feasibility problem asks if there is a setting of the variables that simultaneously satisfies each of the inequalities.  
 &ensp;&ensp;Show that if we have an algorithm for linear programming, we can use it to solve the linear-inequality feasibility problem. The number of variables and constraints that you use in the linear-programming problem should be polynomial in n and m.  
 
 ### 分析：
