@@ -80,7 +80,7 @@ return min(AK,BK)
  ```   
 
 ### Subproblem reduction graph:  
-![](img/in-post/divide_and_conquer_q1.jpg)
+![](img/in-post/divide-and-conquer-q1.jpg)
 
 ### Prove the correctness：
 
@@ -122,7 +122,7 @@ find-local-minimum(T,rootnode v):
 ```
 ### subproblem reduction graph：   
 
-![](img/in-post/divide_and_conquer_q2.jpg)
+![](img/in-post/divide-and-conquer-q2.jpg)
 
 ### Prove the correctness：
 1.	 在程序初始的时候，我们从根节点开始程序，将根节点的值与它的左右孩子进行比较，返回两个孩子当中最小的那一个。
@@ -140,7 +140,7 @@ find-local-minimum(T,rootnode v):
 ### 分析：
 &ensp;&ensp;&ensp;&ensp;与利用归并排序求逆序数的个数类似，在递归调用的时候时候分别计算各一半的逆序数，在进行合并时再分别计算位于左边和右边的逆序数，在递归的过程中，对序列进行分割时，直到序列中剩一个数时就无法再分了。在合并的过程中，比较左边序列的L[i]与右边序列的R[j]，如果L[i]>3* R[j]，那么L[i]后面的数字都要比3* R[j]要大，就不需要再比较了，逆序数的个数增加了子数组L的长度减i个。
 
-  pseudo-code：
+### pseudo-code：
 
   ```C
 Sort-and-count(A):
@@ -170,7 +170,7 @@ return (RC,A)
 
 ### subproblem reduction graph：   
 
-![](img/in-post/divide_and_conquer_q3.jpg)
+![](img/in-post/divide-and-conquer-q3.jpg)
 
 ### Prove the correctness：  
 
