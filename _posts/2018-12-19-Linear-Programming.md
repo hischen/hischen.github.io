@@ -56,9 +56,12 @@ $$ max 0$$
 ### 分析：
 &emsp;&emsp;对于这个问题，我们将该问题转化为线性规划问题。我们可以假设$x_{ij}$为课程i占用编号为j的教室。$x_{ij}$为布尔类型变量，只能取1或者0。当课程$i$占用$j$教室时，$x_{ij}$为1，否则为0。即：  
 
-$$x_{ij}=１　　当课程i占用j教室时$$
-$$x_{ij}=0　　其他情况$$　　
-其中，$i=1,2,\cdots,n;j=1,2,\cdots,m$。  
+$$x_{ij}=１　　当课程i占用j教室时$$   
+
+$$x_{ij}=0　　其他情况$$　　   
+
+其中，$i=1,2,\cdots,n;j=1,2,\cdots,m$。     
+
 为了让尽可能多的课程被安排到，我们的目标函数可以设为：
 
 $$MAX \sum_{i=1}^{n}\sum_{j=1}^{m}x_{ij}$$
@@ -66,19 +69,24 @@ $$MAX \sum_{i=1}^{n}\sum_{j=1}^{m}x_{ij}$$
 约束条件有两个：
 1.	一门课程只能安排一个教室，不能出现一门课程安排多个教室的情况。对应的约束条件为：
 
-$$ \sum_{j=1}^{m}x_{ij}\leq1,i=1,2,\cdots,n$$
+$$ \sum_{j=1}^{m}x_{ij}\leq1,i=1,2,\cdots,n$$    
+
 2.	如果两门课要安排在同一个教室，则他们的时间不能冲突。对应的约束条件为: 
 
-$$ F_i(x_{ij}+x_{kj}-1)\leq S_k,0<i<k\leq n 　j=1,2,\cdots,m$$ 
+$$ F_i(x_{ij}+x_{kj}-1)\leq S_k,0<i<k\leq n 　j=1,2,\cdots,m$$    
+
 
 当$x_{ij}$=$x_{kj}$=1时，课程$i$和课程$k$都要占用编号为$j$的教室，此时要想它们之前不发生冲突，则需要$F_i<=S_k$;当$x_{ij}$=1，$x_{kj}$=0 或者$x_{ij}$=0，$x_{kj}$=1时，也不会发生冲突。  
 
 总的线性规划表达为：  
 
-$$MAX \sum_{i=1}^{n}\sum_{j=1}^{m}x_{ij}$$  
-$$ s.t.　F_i(x_{ij}+x_{kj}-1)\leq S_k,0<i<k\leq n 　j=1,2,\cdots,m$$ 
-$$ \sum_{j=1}^{m}x_{ij}\leq1,i=1,2,\cdots,n$$
-$$x_{ij}=0　or　１,i=1,2,\cdots,n;j=1,2,\cdots,m $$
+$$MAX \sum_{i=1}^{n}\sum_{j=1}^{m}x_{ij}$$    
+
+$$ s.t.　F_i(x_{ij}+x_{kj}-1)\leq S_k,0<i<k\leq n 　j=1,2,\cdots,m$$   
+
+$$ \sum_{j=1}^{m}x_{ij}\leq1,i=1,2,\cdots,n$$   
+
+$$x_{ij}=0　or　１,i=1,2,\cdots,n;j=1,2,\cdots,m $$   
 
 
 在这里，我们假设共有2个教室，m=2，共有4节课，n=4。四节课每节课对应的上课时间的区间$[S_i,F_i]$为：[1,40],[1,40],[50,90],[50,90]。对应的GLPK的mod文件内容如下：
@@ -186,18 +194,29 @@ the road. Each gas station is assigned to a nearby town, and the distance betwee
 ### 分析：
 &ensp;&ensp;&ensp;&ensp;对于这个问题，我们假设z为两个相邻的加气站的最大距离，$x_i$为第$i$个加气站距离路的端点的距离，$d_i$为第$i$个城镇距离路的端点的距离，$r$为每个城镇与对应的加气站之间的最大距离。我们可以列出如下的线性规划： 
 
-$$min z$$  
-$$s.t.　x_{i+1}-x_i\leq z　 i=2,3,\cdots,n$$  
-$$d_i-r\leq x_i\leq d_i+r　i=1,2,\cdots,n$$  
-$$d_i + r < d_{i+1}-r　i=1,\cdots,n-1$$  
-$$0 < r < d_1$$  
-$$d_1 < d_2 < \cdots < d_n$$  
-$$x_i,z>=0$$  
+$$min z$$   
+
+$$s.t.　x_{i+1}-x_i\leq z　 i=2,3,\cdots,n$$    
+
+$$d_i-r\leq x_i\leq d_i+r　i=1,2,\cdots,n$$    
+
+$$d_i + r < d_{i+1}-r　i=1,\cdots,n-1$$   
+
+$$0 < r < d_1$$   
+
+$$d_1 < d_2 < \cdots < d_n$$   
+
+$$x_i,z>=0$$   
+
 转化为线性规划的标准型：  
 
-$$min z$$
-$$s.t.　x_{i+1}-x_i-z\leq 0　i=2,3,…,n$$
-$$x_i<=d_i+r　i=1,2,…,n$$
-$$- x_i \leq d_i-r　i=1,2,…,n$$
+$$min z$$  
+
+$$s.t.　x_{i+1}-x_i-z\leq 0　i=2,3,…,n$$  
+
+$$x_i<=d_i+r　i=1,2,…,n$$  
+
+$$- x_i \leq d_i-r　i=1,2,…,n$$   
+
 $$xi,z \geq 0$$
 
