@@ -2,9 +2,11 @@
 layout: post
 title: "互联网新闻「情感分析」"
 subtitle: "Emotional Analysis of Internet News"
-author: "Hux"
+date:   2019-12-12 12:00:00
+author: "hischen"
 header-img: "img/post-bg-rwd.jpg"
 header-mask: 0.3
+catalog:    true
 tags:
   - CCF大数据与计算智能大赛
   - CCF Big Data & Computing Intelligence Contest
@@ -24,7 +26,7 @@ tags:
     </script>
 </head>
 
-　　　最近几个月参加了CCF大数据与计算智能大赛（CCF Big Data & Computing Intelligence Contest，简称CCF BDCI）分赛道里的 [「互联网新闻情感分析」](https://www.datafountain.cn/competitions/350)比赛（Emotional Analysis of Internet News），获得了初赛(14/2745),复赛(7/2745)的成绩。我的队员有来自北京语言大学的张海鸥同学和来自上海交通大学的彭启明和徐传华同学。
+　　最近几个月参加了CCF大数据与计算智能大赛（CCF Big Data & Computing Intelligence Contest，简称CCF BDCI）分赛道里的 [「互联网新闻情感分析」](https://www.datafountain.cn/competitions/350)比赛（Emotional Analysis of Internet News），获得了初赛(14/2745),复赛(7/2745)的成绩。我的队员有来自北京语言大学的张海鸥同学和来自上海交通大学的彭启明和徐传华同学。
 
 ## 赛题任务
 
@@ -36,13 +38,16 @@ tags:
 
 ## 评分标准
 
-　　　本赛题采用Macro-F1值进行评价。详细评分算法如下：   
+　　本赛题采用Macro-F1值进行评价。详细评分算法如下：   
 
 $$精确率=\frac{TP}{TP+FP}$$       
+　
 
-$$召回率=\frac{TP}{TP+FN}$$    
+$$召回率=\frac{TP}{TP+FN}$$  　　
 
-$$F1分数=\frac{2*精确率*召回率}{精确率+召回率}$$    
+
+$$F1分数=\frac{2*精确率*召回率}{精确率+召回率}$$    　　
+
 
 
 　　其中，TP是真样例，FP是假阳例，FN是假阴例，通过以上公式得到该类f1值，将每一类f1值求平均，即得到Macro-F1值。
@@ -60,7 +65,7 @@ $$F1分数=\frac{2*精确率*召回率}{精确率+召回率}$$
 
 ## 模型
 
-　　　我们采用的都是基于预训练语言模型的方法，尝试过的预训练语言模型有BERT、BERT-wwm、ERNIE、XLNet、RoBERTa。具体使用的代码是基于[Baseline](https://github.com/guoday/CCF-BDCI-Sentiment-Analysis-Baseline)上进行修改的。在该Baseline中，将文本截成k段，分别输入BERT等语言模型，然后再将cls的输出，即pooled_output的输出用双向GRU拼接起来，然后再做分类。  
+　　我们采用的都是基于预训练语言模型的方法，尝试过的预训练语言模型有BERT、BERT-wwm、ERNIE、XLNet、RoBERTa。具体使用的代码是基于[Baseline](https://github.com/guoday/CCF-BDCI-Sentiment-Analysis-Baseline)上进行修改的。在该Baseline中，将文本截成k段，分别输入BERT等语言模型，然后再将cls的输出，即pooled_output的输出用双向GRU拼接起来，然后再做分类。  
 　　将数据分为5个fold，然后训练五个模型，输出五个分类概率，再取平均得到最后的预测标签。  
 　　经过对比发现，单模型表现最出色的预训练语言模型是[RoBERTa-wwm-ext-large](https://github.com/ymcui/Chinese-BERT-wwm)。
 
