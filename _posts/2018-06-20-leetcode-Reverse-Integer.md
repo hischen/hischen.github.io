@@ -2,6 +2,7 @@
 layout: post
 title: "leetcode刷题之Reverse Integer"
 subtitle: '整数反转'
+date:   2018-06-20 12:00:00
 author: "hischen"
 header-style: text
 tags:
