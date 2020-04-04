@@ -82,6 +82,7 @@ class Solution:
 C++代码：
 
 ```C++
+{% raw %}
 class Solution {
 public:
     int romanToInt(string s) {
@@ -100,6 +101,7 @@ public:
     return result;
     }
 };
+{% endraw %}
 ```
 
 ## 复杂度分析
