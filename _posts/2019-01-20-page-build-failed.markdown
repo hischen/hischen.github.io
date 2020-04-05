@@ -22,7 +22,7 @@ tags:
 >{% raw %}The variable `{{ }` on line 75 in `***` was not properly closed with `}}`. For more information, see https://help.github.com/en/github/working-with-github-pages/troubleshooting-jekyll-build-errors-for-github-pages-sites#tag-not-properly-terminated.{% endraw %}
 
 
-　　找了很多原因，发现如果 markdown 文件包含代码块（无论是C++，Python等还是LaTeX），且代码块中包含花括号 { 或 }，尤其是包含 {% 或 {{ 符号组合时，GitHub Page 会报错。
+　　{% raw %}找了很多原因，发现如果 markdown 文件包含代码块（无论是C++，Python等还是LaTeX），且代码块中包含花括号 { 或 }，尤其是包含 {% 或 {{ 符号组合时，GitHub Page 会报错。{% endraw %}
 　　众所周知，GitHub Page 默认使用 [Jekyll](https://jekyllrb.com/)来从Markdown文件生成网页，而Jekyll是使用[Liquid](https://shopify.github.io/liquid/) 模版语言的，Jekyll通过Liquid模板语言在文本中加入简单的标记，从而自动化的将文本形成静态网页。Liquid代码可以分为以下 [三类](https://shopify.github.io/liquid/basics/introduction/)：
 - Objects：tell Liquid where to show content on a page.Objects and variable names are denoted by double curly braces: {{ and }}.
 - Tags：create the logic and control flow for templates. They are denoted by curly braces and percent signs: {% and %}.
