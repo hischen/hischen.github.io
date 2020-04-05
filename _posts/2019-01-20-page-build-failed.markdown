@@ -35,13 +35,15 @@ tags:
 
 
 
-　　　{% raw %}如果在你的GitHub Pages里的Markdown文件里的代码段中出现了与 上述Liquid 代码的三类标记相同的字符组合，你的GitHub Pages网站就会发生构建错误，在你GitHub 账号的邮箱里，也会收到page build failed(构建失败)的邮件，例如：
->The page build failed for the `master` branch with the following error:
->The variable `{{ }` on line ** in `***.md` was not properly closed with `}}`.
+　　　如果在你的GitHub Pages里的Markdown文件里的代码段中出现了与 上述Liquid 代码的三类标记相同的字符组合，你的GitHub Pages网站就会发生构建错误，在你GitHub 账号的邮箱里，也会收到page build failed(构建失败)的邮件，例如：  
 
->The tag `{%` on line ** in `***.md` was not properly closed with `%}`.
-{% endraw %}
-　　{% raw %}Jekyll 在构建网站时，将代码段中的"{{"或 "{%" 符号组合识别为 _Liquid Objects或者 Liquid tag_ 的起始部分，从而会导致『page build failed』的错误.{% endraw %}
+>The page build failed for the `master` branch with the following error:  
+
+>{% raw %}The variable `{{ }` on line ** in `***.md` was not properly closed with `}}`.{% endraw %}
+
+>{% raw %}The tag `{%` on line ** in `***.md` was not properly closed with `%}`.{% endraw %}
+
+　　{% raw %}Jekyll 在构建网站时，将代码段中的"{{"或 "{%" 符号组合识别为 _Liquid Objects或者 Liquid tag_ 的起始部分，从而会导致『page build failed』的错误。{% endraw %}
 
 　　根据来自stackoverflow [_ignore-a-specific-tag-in-jekyll_](https://stackoverflow.com/questions/16256799/ignore-a-specific-tag-in-jekyll)的答案，尝试在出现以上三种标记的代码段前加入 "{_% raw %_} "，代码段后加入 "{_% endraw %_}" ，即：
 
