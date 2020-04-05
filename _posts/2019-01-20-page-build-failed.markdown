@@ -15,7 +15,7 @@ tags:
 
 
 
->写博客的时候，有一次在插入代码的时候，在C++里定义了一个_unordered_map_，有一行代码用"{{"开始，以"}}"结束的，然后就收到了GitHub官方的Page build failure邮件：
+>写博客的时候，有一次在插入代码的时候，在C++里定义了一个_unordered_map_，有一行代码用"&#123;&#123;"开始，以"&#125;&#125;"结束的，然后就收到了GitHub官方的Page build failure邮件：
 
 
 >The page build failed for the `master` branch with the following error:   
@@ -30,12 +30,12 @@ tags:
 
 - Objects：tell Liquid where to show content on a page.Objects and variable names are denoted by double curly braces: _{_{ and _}_}.
 - Tags：create the logic and control flow for templates. They are denoted by curly braces and percent signs: _{_% and _%_}.
-- Filters：change the output of a Liquid object. They are used within an output and are separated by a _|_.  
+- Filters：change the output of a Liquid object. They are used within an output and are separated by a &#124; .  
 
 
 
 
-　　　如果在你的GitHub Pages里的Markdown文件里的代码段中出现了与 上述Liquid 代码的三类标记相同的字符组合，你的GitHub Pages网站就会发生构建错误，在你GitHub 账号的邮箱里，也会收到page build failed(构建失败)的邮件，例如：  
+　　如果在你的GitHub Pages里的Markdown文件里的代码段中出现了与 上述Liquid 代码的三类标记相同的字符组合，你的GitHub Pages网站就会发生构建错误，在你GitHub 账号的邮箱里，也会收到page build failed(构建失败)的邮件，例如：  
 
 >The page build failed for the `master` branch with the following error:  
 
