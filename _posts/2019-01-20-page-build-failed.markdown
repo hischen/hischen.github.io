@@ -36,9 +36,9 @@ tags:
 {% endraw %}
 　　{% raw %}Jekyll 在构建网站时，将代码段中的"{{"或 "{%" 符号组合识别为 _Liquid Objects_或者_Liquid tag_ 的起始部分，从而会导致『page build failed』的错误.{% endraw %}
 　　{% raw %}根据来自stackoverflow [_ignore-a-specific-tag-in-jekyll_](https://stackoverflow.com/questions/16256799/ignore-a-specific-tag-in-jekyll)的答案，尝试在出现以上三种标记的代码段前加入 _{% raw %}_ ，代码段后加入 _{% endraw %}_ ，即：{% endraw %}
-{% raw %}
-    {% raw %}
-  	{{ ... }}
-	{% endraw %}
-{% endraw %}
+
+
+![](/img/in-post/post-page-build-failed.jpg)
+
+
 即可避免这个错误。
