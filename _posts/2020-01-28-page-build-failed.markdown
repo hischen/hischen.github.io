@@ -17,8 +17,9 @@ tags:
 
 >写博客的时候，有一次在插入代码的时候，在C++里定义了一个_unordered_map_，用“{{”开始，“}}”结束的，然后就收到了GitHub官方的Page build failure邮件：
 
+
 >The page build failed for the `master` branch with the following error:
->The variable `{{ }` on line 75 in `***` was not properly closed with `}}`. For more information, see https://help.github.com/en/github/working-with-github-pages/troubleshooting-jekyll-build-errors-for-github-pages-sites#tag-not-properly-terminated.
+>{% raw %}The variable `{{ }` on line 75 in `***` was not properly closed with `}}`. For more information, see https://help.github.com/en/github/working-with-github-pages/troubleshooting-jekyll-build-errors-for-github-pages-sites#tag-not-properly-terminated.{% endraw %}
 
 
 　　找了很多原因，发现如果 markdown 文件包含代码块（无论是C++，Python等还是LaTeX），且代码块中包含花括号 { 或 }，尤其是包含 {% 或 {{ 符号组合时，GitHub Page 会报错。
