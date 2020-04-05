@@ -30,7 +30,7 @@ tags:
 
 - Objects：tell Liquid where to show content on a page.Objects and variable names are denoted by double curly braces: _{_{ and _}_}.
 - Tags：create the logic and control flow for templates. They are denoted by curly braces and percent signs: _{_% and _%_}.
-- Filters：change the output of a Liquid object. They are used within an output and are separated by a |.  
+- Filters：change the output of a Liquid object. They are used within an output and are separated by a _|_.  
 
 
 
