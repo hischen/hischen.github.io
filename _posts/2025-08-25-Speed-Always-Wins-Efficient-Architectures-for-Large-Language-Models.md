@@ -118,7 +118,7 @@ tags:
 在此重排下，\(\phi(K)^{\top}V\) 的维度仅为 \(d \times d\)（\(d\) 为特征维度），与序列长度 \(N\) 无关。由此，整体计算复杂度从原始的  
 
 \[
-O(N^2 d) \;\;\; \rightarrow \;\;\; O(N d^2)
+O(N^2 d) \;\;\; \longrightarrow \;\;\; O(N d^2)
 \]
 
 当 \(N \gg d\) 时，优化效果尤为显著。
@@ -307,7 +307,6 @@ MoE为构建万亿参数模型提供了高效路径。通过解耦模型总参�
 
 ### 2.6 扩散大模型（Diffusion LLMs）——并行生成的新范式
 
-![Diffusion LLM model](fac7ef06274a752df7eea0ce35b43131.png)
 ![Hybrid Model Architecture](/img/in-post/A_Survey_on_Efficient_Architectures_for_Large_Language_Models/16.png)
 
 扩散大模型代表了一种与传统自回归LLM截然不同的生成哲学。
@@ -379,61 +378,61 @@ MoE为构建万亿参数模型提供了高效路径。通过解耦模型总参�
 #### Review Papers
 
 - **Speed Always Wins: A Survey on Efficient Architectures for Large Language Models**  
-  [arXiv:2508.09834](https://arxiv.org/abs/2508.09834) :contentReference[oaicite:6]{index=6}
+  [arXiv:2508.09834](https://arxiv.org/abs/2508.09834)
 
 - **A Survey of Large Language Models**  
-  [arXiv:2303.18223](https://arxiv.org/abs/2303.18223) :contentReference[oaicite:9]{index=9}
+  [arXiv:2303.18223](https://arxiv.org/abs/2303.18223)
 
 #### Linear Sequence Modeling
 
 - **Log-Linear Attention**  
-  [arXiv:2506.04761](https://arxiv.org/pdf/2506.04761) :contentReference[oaicite:12]{index=12}
+  [arXiv:2506.04761](https://arxiv.org/pdf/2506.04761)
 
 - **ReGLA: Refining Gated Linear Attention**  
-  [arXiv:2502.01578](https://arxiv.org/abs/2502.01578) :contentReference[oaicite:15]{index=15}
+  [arXiv:2502.01578](https://arxiv.org/abs/2502.01578)
 
 - **RWKV-7 "Goose" with Expressive Dynamic State Evolution**  
-  [arXiv:2503.14456](https://arxiv.org/abs/2503.14456) :contentReference[oaicite:18]{index=18}
+  [arXiv:2503.14456](https://arxiv.org/abs/2503.14456)
 
 - **Mamba: Linear-Time Sequence Modeling with Selective State Spaces**  
-  [arXiv:2312.00752](https://arxiv.org/abs/2312.00752) :contentReference[oaicite:21]{index=21}
+  [arXiv:2312.00752](https://arxiv.org/abs/2312.00752)
 
 #### Sparse Sequence Modeling
 
 - **LongNet: Scaling Transformers to 1,000,000,000 Tokens**  
-  [arXiv:2307.02486](https://arxiv.org/abs/2307.02486) :contentReference[oaicite:24]{index=24}
+  [arXiv:2307.02486](https://arxiv.org/abs/2307.02486)
 
 - **Mixture of Sparse Attention: Content-Based Learnable Sparse Attention via Expert-Choice Routing**  
-  [arXiv:2505.00315](https://arxiv.org/html/2505.00315) :contentReference[oaicite:27]{index=27}
+  [arXiv:2505.00315](https://arxiv.org/abs/2505.00315)
 
 #### Efficient Full Attention
 
 - **FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness**  
-  [arXiv:2205.14135](https://arxiv.org/abs/2205.14135) :contentReference[oaicite:30]{index=30}
+  [arXiv:2205.14135](https://arxiv.org/abs/2205.14135)
 
 - **SageAttention 3: Microscaling FP4 Attention for Inference and an Exploration of 8-Bit Training**  
-  [arXiv:2308.07652](https://arxiv.org/abs/2308.07652) :contentReference[oaicite:33]{index=33}
+  [arXiv:2308.07652](https://arxiv.org/abs/2308.07652)
 
 #### Sparse Mixture-of-Experts
 
 - **LoRAMoE: Alleviate World Knowledge Forgetting in Large Language Models via MoE-Style Plugin**  
-  [arXiv:2308.07652](https://arxiv.org/abs/2308.07652) :contentReference[oaicite:36]{index=36}
+  [arXiv:2308.07652](https://arxiv.org/abs/2308.07652)
 
 - **MoEfication: Transformer Feed-forward Layers are Mixtures of Experts**  
-  [arXiv:2308.07652](https://arxiv.org/abs/2308.07652) :contentReference[oaicite:39]{index=39}
+  [arXiv:2308.07652](https://arxiv.org/abs/2308.07652)
 
 #### Hybrid Architectures
 
 - **Zamba: A Compact 7B SSM Hybrid Model**  
-  [arXiv:2308.07652](https://arxiv.org/abs/2308.07652) :contentReference[oaicite:42]{index=42}
+  [arXiv:2308.07652](https://arxiv.org/abs/2308.07652)
 
 - **LoLA: Low-Rank Linear Attention With Sparse Caching**  
-  [arXiv:2308.07652](https://arxiv.org/abs/2308.07652) :contentReference[oaicite:45]{index=45}
+  [arXiv:2308.07652](https://arxiv.org/abs/2308.07652)
 
 #### Diffusion Large Language Models
 
 - **Large Language Diffusion Models**  
-  [arXiv:2308.07652](https://arxiv.org/abs/2308.07652) :contentReference[oaicite:48]{index=48}
+  [arXiv:2308.07652](https://arxiv.org/abs/2308.07652)
 
 
 
