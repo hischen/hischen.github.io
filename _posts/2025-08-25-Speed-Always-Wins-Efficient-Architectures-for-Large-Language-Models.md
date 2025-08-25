@@ -4,7 +4,7 @@ title: "Speed Always Wins: A Survey on Efficient Architectures for Large Languag
 subtitle: "Efficient Architectures for Large Language Models "
 date:   2025-08-26 22:00:00
 author: "hischen"
-header-img: "img/post-bg-rwd.jpg"
+header-img: "img/post-namc.jpg"
 header-mask: 0.3
 catalog:    true
 tags:
