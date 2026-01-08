@@ -92,36 +92,36 @@ tags:
 
 传统自注意力（Self-Attention）的计算可以简化为：
 
-\[
+$$
 \text{Attention}(Q, K, V) = \text{softmax}\!\left(\frac{QK^{\top}}{\sqrt{d_k}}\right) V
-\]
+$$
 
-其中，计算 \(QK^{\top}\) 会生成一个 \(N \times N\) 的注意力矩阵（\(N\) 为序列长度），因此整体计算复杂度为 \(O(N^2d)\)。
+其中，计算 $QK^{\top}$ 会生成一个 $N \times N$ 的注意力矩阵（$N$ 为序列长度），因此整体计算复杂度为 $O(N^2d)$。
 
 ---
 
 **线性注意力（Linear Attention）** 的核心思想是：将 `softmax` 操作替换为一个可分解的"核函数"表示，即将相似度函数表示为  
 
-\[
+$$
 \text{sim}(q, k) = \phi(q)^{\top}\phi(k)
-\]
+$$
 
-其中 \(\phi(\cdot)\) 是一种核映射函数。这样一来，计算可利用矩阵乘法的结合律重排为：
+其中 $\phi(\cdot)$ 是一种核映射函数。这样一来，计算可利用矩阵乘法的结合律重排为：
 
-\[
+$$
 \text{Output} = \big(\phi(Q)\phi(K)^{\top}\big) V
            = \phi(Q)\big(\phi(K)^{\top}V\big)
-\]
+$$
 
 ---
 
-在此重排下，\(\phi(K)^{\top}V\) 的维度仅为 \(d \times d\)（\(d\) 为特征维度），与序列长度 \(N\) 无关。由此，整体计算复杂度从原始的  
+在此重排下，$\phi(K)^{\top}V$ 的维度仅为 $d \times d$（$d$ 为特征维度），与序列长度 $N$ 无关。由此，整体计算复杂度从原始的  
 
-\[
+$$
 O(N^2 d) \;\;\; \longrightarrow \;\;\; O(N d^2)
-\]
+$$
 
-当 \(N \gg d\) 时，优化效果尤为显著。
+当 $N \gg d$ 时，优化效果尤为显著。
 
 ![Linear sequence modeling and their connections](/img/in-post/A_Survey_on_Efficient_Architectures_for_Large_Language_Models/4.png)
 
@@ -141,9 +141,9 @@ O(N^2 d) \;\;\; \longrightarrow \;\;\; O(N d^2)
 - ** 状态空间模型（State Space Models, SSMs）**
 SSM 源于控制理论，其核心思想是将输入序列视为连续信号，并通过一个"状态变量"进行历史信息建模，根据当前输入动态更新状态并产生输出。其基本形式为：
 
-\[
+$$
 A h_{t-1} + B x_t = C x_t + D x_t
-\]
+$$
 
 早期的 SSM 已经展现出极强的长序列建模能力，而真正推动该方向快速发展的，是 **Mamba 模型** 的提出。  
 Mamba 的核心创新在于 **选择性机制（Selection）**：模型通过动态调整状态转移矩阵，依据输入灵活决定"记忆"或"遗忘"哪些信息。  
